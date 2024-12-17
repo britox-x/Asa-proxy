@@ -1,15 +1,15 @@
-//
-// Do any local configuration here
-//
+;
+; Do any local configuration here
+;
 
-zone "asa.br"{
+zone "asa.br" {
     type master;
-    file "/etc/bind/db.asa.br";
-    allow-transfer {
-        127.0.0.1;
-    };
+    file "/etc/bind/db.asa.br";  # Caminho para o arquivo de zona
+    allow-transfer { 127.0.0.1; };  # Permite a transferência de zona apenas para o servidor local
 };
 
-// Consider adding the 1918 zones here, if they are not used in your
-// organization
-//include "/etc/bind/zones.rfc1918";
+;
+; Consider adding the 1918 zones here, if they are not used in your
+; organization
+;
+# include "/etc/bind/zones.rfc1918";  # Descomente se for necessário incluir zonas RFC1918
