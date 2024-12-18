@@ -16,7 +16,7 @@ $TTL    604800
 www     IN      A       192.168.56.1  ; IP do servidor de aplicação (onde está o site)
 
 ; Registros CNAME (alias para outros subdomínios)
-portal  IN      CNAME   www.asa.br.   ; Alias para o site (aponta para www)
-brito   IN      CNAME   www.asa.br.   ; Alias para o site (aponta para www)
-matheus IN      CNAME   www.asa.br.   ; Alias para o site (aponta para www)
-bezerra IN      CNAME   www.asa.br.   ; Alias para o site (aponta para www)
+portal  IN      CNAME   www   
+brito   IN      CNAME   www   
+matheus IN      CNAME   www   
+bezerra IN      CNAME   www  
