@@ -2,14 +2,19 @@
 // Do any local configuration here
 //
 
-zone "asa.br"{
+// Configuração da zona "asa.br"
+zone "asa.br" {
     type master;
-    file "/etc/bind/db.asa.br";
+    file "/etc/bind/db.asa.br";  // Caminho para o arquivo de zona
     allow-transfer {
-        127.0.0.1;
+        127.0.0.1;               // Permitir transferência apenas localmente
     };
+    allow-query {
+        any;                     // Permitir consultas de qualquer origem
+    };
+    notify yes;                  // Notificar servidores secundários sobre alterações
 };
 
-// Consider adding the 1918 zones here, if they are not used in your
-// organization
-//include "/etc/bind/zones.rfc1918";
+// Configuração opcional para incluir zonas RFC 1918 (privadas)
+// Consider adding the 1918 zones here, if they are not used in your organization
+// include "/etc/bind/zones.rfc1918";
