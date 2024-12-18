@@ -12,8 +12,8 @@ $TTL    604800
 @       IN      NS      ns.asa.br.  ; Nome do servidor de DNS
 
 ; Registros A (endereços IPv4 para os domínios)
-@       IN      A       192.168.1.67  ; IP do servidor DNS (ajuste conforme necessário)
-www     IN      A       192.168.1.67  ; IP do servidor de aplicação (onde está o site)
+@       IN      A       192.168.56.1  ; IP do servidor DNS (ajuste conforme necessário)
+www     IN      A       192.168.56.1  ; IP do servidor de aplicação (onde está o site)
 
 ; Registros CNAME (alias para outros subdomínios)
 portal  IN      CNAME   www.asa.br.   ; Alias para o site (aponta para www)
