@@ -1,7 +1,7 @@
 ; BIND data file for asa.br zone
 $TTL    604800
 @       IN      SOA     ns.asa.br. root.asa.br. (
-                        2024121801 ; Serial (incrementar em cada alteração)
+                        2024121805 ; Serial (incrementar em cada alteração)
                         604800     ; Refresh
                         86400      ; Retry
                         2419200    ; Expire
@@ -20,5 +20,7 @@ www     IN      A       192.168.1.68  ; IP do site principal
 ;bezerra IN      A       192.168.1.68  ; IP do backend do Bezerra
 
 ; Registros CNAME (alias, se aplicável)
-portal  IN      CNAME   www           ; Alias para o site principal
-brito   IN      CNAME   www
+portal   IN      CNAME   www           ; Alias para o site principal
+brito    IN      CNAME   www
+matheus  IN      CNAME   www
+bezerra  IN      CNAME   www
