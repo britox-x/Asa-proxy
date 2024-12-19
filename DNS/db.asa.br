@@ -1,22 +1,23 @@
 ; BIND data file for asa.br zone
-;
 $TTL    604800
 @       IN      SOA     ns.asa.br. root.asa.br. (
-                        2024121701 ; Serial (deve ser incrementado a cada alteração)
+                        2024121801 ; Serial (incrementar em cada alteração)
                         604800     ; Refresh
                         86400      ; Retry
                         2419200    ; Expire
                         604800 )   ; Negative Cache TTL
 
 ; Nameservers
-@       IN      NS      ns.asa.br.  ; Nome do servidor de DNS
+@       IN      NS      ns.asa.br.  ; Servidor DNS principal
 
-; Registros A (endereços IPv4 para os domínios)
-@       IN      A       192.168.56.1  ; IP do servidor DNS (ajuste conforme necessário)
-www     IN      A       192.168.56.1  ; IP do servidor de aplicação (onde está o site)
+; Registros A (endereços IPv4 para os domínios principais)
+@       IN      A       192.168.56.1  ; IP do servidor DNS
+www     IN      A       192.168.56.1  ; IP do site principal
 
-; Registros CNAME (alias para outros subdomínios)
-portal  IN      CNAME   www   
-brito   IN      CNAME   www   
-matheus IN      CNAME   www   
-bezerra IN      CNAME   www  
+; Registros A para subdomínios (endereços específicos para cada cliente)
+brito   IN      A       192.168.56.1  ; IP do backend do Brito
+matheus IN      A       192.168.56.1  ; IP do backend do Matheus
+bezerra IN      A       192.168.56.1  ; IP do backend do Bezerra
+
+; Registros CNAME (alias, se aplicável)
+portal  IN      CNAME   www           ; Alias para o site principal
