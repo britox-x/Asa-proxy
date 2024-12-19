@@ -11,14 +11,14 @@ $TTL    604800
 @       IN      NS      ns.asa.br.  ; Servidor DNS principal
 
 ; Registros A (endereços IPv4 para os domínios principais)
-@       IN      A       192.168.137.121  ; IP do servidor DNS
-ns      IN      A       192.168.137.121
-www     IN      A       192.168.137.121  ; IP do site principal
+ns      IN      A       192.168.1.68  ; IP do servidor DNS
+www     IN      A       192.168.1.68  ; IP do site principal
 
 ; Registros A para subdomínios (endereços específicos para cada cliente)
-brito   IN      A       192.168.137.121  ; IP do backend do Brito
-matheus IN      A       192.168.137.121  ; IP do backend do Matheus
-bezerra IN      A       192.168.137.121  ; IP do backend do Bezerra
+;brito   IN      A       192.168.1.68  ; IP do backend do Brito
+;matheus IN      A       192.168.1.68  ; IP do backend do Matheus
+;bezerra IN      A       192.168.1.68  ; IP do backend do Bezerra
 
 ; Registros CNAME (alias, se aplicável)
 portal  IN      CNAME   www           ; Alias para o site principal
+brito   IN      CNAME   www
